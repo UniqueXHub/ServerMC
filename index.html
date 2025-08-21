@@ -69,7 +69,6 @@
     </aside>
 
     <main>
-      <!-- RULES -->
       <article class="card wiki" data-tags="rules,กติกา" id="rules">
         <h2>กติกา (Rules)</h2>
         <div class="meta">อัปเดตล่าสุด: <span class="now"></span></div>
@@ -85,7 +84,6 @@
         </div>
       </article>
 
-      <!-- GUIDELINES -->
       <article class="card wiki" data-tags="guidelines,แนวทาง" id="guidelines">
         <h2>แนวทาง (Guidelines)</h2>
         <div class="meta">อัปเดตล่าสุด: <span class="now"></span></div>
@@ -102,7 +100,6 @@ pick lock 30-128 อัน</li>
         </div>
       </article>
 
-      <!-- INFO -->
       <article class="card wiki" data-tags="info,ข้อมูล,faq" id="info">
         <h2>ข้อมูลต่างๆ (Info)</h2>
         <div class="meta">อัปเดตล่าสุด: <span class="now"></span></div>
@@ -139,13 +136,11 @@ pick lock 30-128 อัน</li>
   </div>
 
   <script>
-    // แสดงวันที่ปัจจุบันในทุกบล็อก
     document.querySelectorAll('.now').forEach(el=>{
       const d = new Date();
       el.textContent = d.toLocaleDateString('th-TH', {year:'numeric', month:'short', day:'numeric'});
     });
 
-    // ค้นหาบทความด้วยคีย์เวิร์ด (กรองการ์ด)
     function doSearch(){
       const q = document.getElementById('q').value.trim().toLowerCase();
       const items = document.querySelectorAll('.wiki');
@@ -156,7 +151,6 @@ pick lock 30-128 อัน</li>
     }
     document.getElementById('q').addEventListener('input', doSearch);
 
-    // เลื่อนนุ่มๆ เวลา click ลิงก์สารบัญ
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
         const id = a.getAttribute('href');
