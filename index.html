@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wiki Server MC</title>
+  <style>
+    :root{
+      --bg:#0b1020; --card:#121932; --muted:#8aa0c6; --text:#e8eeff; --accent:#6ca0ff; --accent-2:#8fffcc;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto; background:linear-gradient(180deg,#0a0f1e,#0b1329 30%,#0c1431); color:var(--text);}    
+    a{color:var(--accent)}
+    header{position:sticky;top:0;z-index:10;backdrop-filter:saturate(130%) blur(8px);background:rgba(10,14,30,.7); border-bottom:1px solid rgba(255,255,255,.06)}
+    .wrap{max-width:1100px;margin:0 auto;padding:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:36px;height:36px;border-radius:12px;background:radial-gradient(circle at 30% 30%, var(--accent-2), var(--accent));box-shadow:0 0 0 3px rgba(255,255,255,.06)}
+    .title{font-size:20px;font-weight:800;letter-spacing:.3px}
+    .sub{font-size:12px;color:var(--muted)}
+
+    .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px}
+    .btn{appearance:none;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,#1a2650,#182140);color:var(--text);padding:10px 14px;border-radius:14px;cursor:pointer;font-weight:700}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,.2)}
+
+    .grid{display:grid;grid-template-columns:260px 1fr;gap:18px;margin-top:18px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    aside{position:sticky;top:74px;align-self:start;background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:14px}
+    .nav-title{font-weight:800;margin:4px 0 10px 0}
+    .nav a{display:block;padding:8px 10px;border-radius:10px;color:var(--text);text-decoration:none}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+
+    main{display:flex;flex-direction:column;gap:18px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px}
+    .card h2{margin:0 0 8px 0}
+    .meta{color:var(--muted);font-size:12px;margin-bottom:10px}
+
+    .search{display:flex;gap:10px}
+    .search input{flex:1;background:#0f1630;border:1px solid rgba(255,255,255,.12);color:var(--text);padding:12px 14px;border-radius:12px}
+
+    footer{opacity:.8}
+    .muted{color:var(--muted)}
+    .tag{display:inline-block;font-size:12px;padding:4px 8px;border:1px solid rgba(255,255,255,.12);border-radius:999px;margin-right:6px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="title">Wiki Server MC</div>
+        </div>
+      </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap grid">
+    <aside>
+      <div class="nav-title"></div>
+      <nav class="nav">
+        <a href="#rules">กติกา (Rules)</a>
+        <a href="#guidelines">แนวทาง (Guidelines)</a>
+        <a href="#info">ข้อมูลต่างๆ (Info)</a>
+      </nav>
+      <hr style="border-color:rgba(255,255,255,.08)">
+    </aside>
+
+    <main>
+      <!-- RULES -->
+      <article class="card wiki" data-tags="rules,กติกา" id="rules">
+        <h2>กติกา (Rules)</h2>
+        <div class="meta">อัปเดตล่าสุด: <span class="now"></span></div>
+        <ul>
+          <li>ห้ามใช้ปืนทั้งหมดในรูปนี้ห้ามคราฟห้ามมีไว้ในบ้านหรือในตัว</li>
+          <img src="https://cdn.discordapp.com/attachments/1243616522023469066/1407712000309592226/Screenshot_2025-08-20_193648.png?ex=68a71976&is=68a5c7f6&hm=76f71bedc5c72d63e8e993f0df5e5ead2a5fe7f75493fd0a65bcc9ae91a62f8b&" alt="ห้ามใช้ปืน" style="max-width:320px;border-radius:12px;margin-top:8px;">
+          <li>ใช้แม่กุญแจได้แค่1อันต่อบ้าน(แม่กุญแจใช้ได้แค่กับกล่องbuildเท่านั้นและก็กล่องbuildจะต้องมีป้ายบอกอนาเขต)</li>
+          <li>ห้ามใช้น้ำยาทุกชนิด</li>
+          <li>ห้ามraidบ้านที่คนอยู่ไม่ครบจะไม่สามารถเอาของไปหรือทำลายของมากเกิน</li>
+          <li>ห้ามคราฟแม่กุญแจเพชร</li>
+        </ul>
+        <div>
+        </div>
+      </article>
+
+      <!-- GUIDELINES -->
+      <article class="card wiki" data-tags="guidelines,แนวทาง" id="guidelines">
+        <h2>แนวทาง (Guidelines)</h2>
+        <div class="meta">อัปเดตล่าสุด: <span class="now"></span></div>
+        <ol>
+          <li>เเก้กล้อง
+1:30-4:00 นาที
+pick lock 4-20 อัน
+
+เเก้กล้อง enchant
+6:00 - 10:00
+pick lock 30-128 อัน</li>
+        </ol>
+        <div>
+        </div>
+      </article>
+
+      <!-- INFO -->
+      <article class="card wiki" data-tags="info,ข้อมูล,faq" id="info">
+        <h2>ข้อมูลต่างๆ (Info)</h2>
+        <div class="meta">อัปเดตล่าสุด: <span class="now"></span></div>
+        <h3>คำถามที่พบบ่อย</h3>
+        <details>
+          <summary>ข้อมูลของแม่กุญแจ</summary>
+          <p>wood 30 block gold 35 iron 50 diamond 80 <em>
+        </details>
+<details class="smooth-toggle">
+  <summary>Kitต้นเกมต่างๆ</summary>
+  <div class="content">
+    <article class="card wiki">
+      <h2>เลือกได้แค่1kit</h2>
+      <img src="https://cdn.discordapp.com/attachments/1379808296105410630/1407731756391596197/Screenshot_2025-08-20_201743.png?ex=68a72bdd&is=68a5da5d&hm=66c6f23e5bdf6b00454bbd815dca56e686a5396745f4e9e31748ba9e15a692bc&" alt="Kit ต้นเกม" 
+         style="max-width:300px; border-radius:10px; margin-top:10px;">
+    </article>
+  </div>
+</details>
+
+
+<details>
+  <summary>แผนที่</summary>
+  <article class="card wiki">
+    <h2>Map</h2>
+    <img src="https://cdn.discordapp.com/attachments/1231258951174328402/1404376177384362118/image.png?ex=68a77cfc&is=68a62b7c&hm=8e18a7e4c095868123da06f049a6054b7bbbb6652efb261e17eea7b9e7bcbb3a&" alt="Kit ต้นเกม" 
+       style="max-width:300px; border-radius:10px; margin-top:10px;">
+  </article>
+</details>
+
+      <footer class="muted">
+        Made By. Skibidi fractory <code>Skibidi.rat</code> Ready
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // แสดงวันที่ปัจจุบันในทุกบล็อก
+    document.querySelectorAll('.now').forEach(el=>{
+      const d = new Date();
+      el.textContent = d.toLocaleDateString('th-TH', {year:'numeric', month:'short', day:'numeric'});
+    });
+
+    // ค้นหาบทความด้วยคีย์เวิร์ด (กรองการ์ด)
+    function doSearch(){
+      const q = document.getElementById('q').value.trim().toLowerCase();
+      const items = document.querySelectorAll('.wiki');
+      items.forEach(card=>{
+        const hay = (card.textContent + ' ' + (card.dataset.tags||'')).toLowerCase();
+        card.style.display = hay.includes(q) ? 'block' : (q ? 'none' : 'block');
+      });
+    }
+    document.getElementById('q').addEventListener('input', doSearch);
+
+    // เลื่อนนุ่มๆ เวลา click ลิงก์สารบัญ
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
